@@ -1,9 +1,11 @@
-import picture
+import InterruptibleRecording
 DEBUG_ADDRESS = ('0.0.0.0', 3000)
 
 def doRun(devMode: bool=False):
     print('Running {}...'.format('in DEV mode ' if devMode else ''))
-    picture.snapPicture()
+    interruptibleRecording = InterruptibleRecording.InterruptibleRecording()
+    interruptibleRecording.start()
+    
 
 if __name__ == '__main__':
     import sys
